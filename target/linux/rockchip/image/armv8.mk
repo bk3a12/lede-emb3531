@@ -771,6 +771,16 @@ define Device/rumu3f_fine-3399
 endef
 TARGET_DEVICES += rumu3f_fine-3399
 
+define Device/emb3531
+  DEVICE_VENDOR := EMB
+  DEVICE_MODEL := 3531
+  SOC := rk3399
+  UBOOT_DEVICE_NAME := emb3531-rk3399
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
+  DEVICE_PACKAGES := kmod-r8168 -urngd
+endef
+TARGET_DEVICES += emb3531
+
 define Device/scensmart_sv901-eaio
   DEVICE_VENDOR := ScenSmart
   DEVICE_MODEL := SV901 EAIO

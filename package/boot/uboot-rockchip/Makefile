@@ -145,6 +145,13 @@ define U-Boot/nanopc-t4-rk3399
     friendlyarm_nanopc-t4
 endef
 
+define U-Boot/emb3531-rk3399
+  $(U-Boot/rk3399/Default)
+  NAME:=EMB 3531
+  BUILD_DEVICES:= \
+    emb3531
+endef
+
 define U-Boot/nanopi-r4s-rk3399
   $(U-Boot/rk3399/Default)
   NAME:=NanoPi R4S
@@ -578,6 +585,7 @@ UBOOT_TARGETS := \
   rock-5c-rk3588s \
   dlfr100-rk3399 \
   h3399pc-rk3399 \
+  emb3531-rk3399 \
   fine3399-rk3399 \
   king3399-rk3399 \
   mpc1903-rk3399 \
