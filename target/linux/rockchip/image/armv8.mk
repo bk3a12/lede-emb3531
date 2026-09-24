@@ -777,7 +777,7 @@ define Device/emb3531
   SOC := rk3399
   UBOOT_DEVICE_NAME := emb3531-rk3399
   IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
-  DEVICE_PACKAGES := kmod-r8168 -urngd
+  DEVICE_PACKAGES := kmod-r8168 kmod-igb kmod-rtl8xxxu -urngd
 endef
 TARGET_DEVICES += emb3531
 
