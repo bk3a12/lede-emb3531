@@ -281,6 +281,13 @@ define U-Boot/nanopi-r3s-rk3566
     friendlyarm_nanopi-r3s
 endef
 
+define U-Boot/lubancat-0-rk3566
+  $(U-Boot/rk3566/Default)
+  NAME:=Lubancat Zero N
+  BUILD_DEVICES:= \
+    lubancat-0
+endef
+
 define U-Boot/panther-x2-rk3566
   $(U-Boot/rk3566/Default)
   NAME:=Panther X2
@@ -552,6 +559,7 @@ UBOOT_TARGETS := \
   nanopi-zero2-rk3528 \
   radxa-e20c-rk3528 \
   nanopi-r3s-rk3566 \
+  lubancat-0-rk3566 \
   panther-x2-rk3566 \
   radxa-zero-3-rk3566 \
   rock-3c-rk3566 \

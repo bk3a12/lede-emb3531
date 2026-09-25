@@ -286,6 +286,16 @@ define Device/friendlyarm_nanopi-r3s
 endef
 TARGET_DEVICES += friendlyarm_nanopi-r3s
 
+define Device/lubancat-0
+  DEVICE_VENDOR := Lubancat
+  DEVICE_MODEL := Zero N
+  SOC := rk3566
+  UBOOT_DEVICE_NAME := lubancat-0-rk3566
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
+  DEVICE_PACKAGES := kmod-gpio-button-hotplug kmod-r8168
+endef
+TARGET_DEVICES += lubancat-0
+
 define Device/friendlyarm_nanopi-r4s
   DEVICE_VENDOR := FriendlyARM
   DEVICE_MODEL := NanoPi R4S
@@ -778,7 +788,7 @@ define Device/emb3531
   UBOOT_DEVICE_NAME := emb3531-rk3399
   IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
   DEVICE_PACKAGES := kmod-r8168 kmod-igb kmod-i2c-core kmod-i2c-algo-bit kmod-ptp kmod-pps kmod-hwmon-core \
-	kmod-rtl8xxxu rtl8188eu-firmware kmod-usb-net kmod-usb-net-qmi-wwan kmod-usb-serial-option uqmi -urngd
+	kmod-rtl8188eu rtl8188eu-firmware kmod-usb-net kmod-usb-net-qmi-wwan kmod-usb-serial-option uqmi -urngd
 endef
 TARGET_DEVICES += emb3531
 
