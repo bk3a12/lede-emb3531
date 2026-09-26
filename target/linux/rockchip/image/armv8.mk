@@ -788,7 +788,7 @@ define Device/emb3531
   UBOOT_DEVICE_NAME := emb3531-rk3399
   IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
   DEVICE_PACKAGES := kmod-r8168 kmod-igb kmod-i2c-core kmod-i2c-algo-bit kmod-ptp kmod-pps kmod-hwmon-core \
-	kmod-rtl8188eu rtl8188eu-firmware kmod-usb-net kmod-usb-net-qmi-wwan kmod-usb-serial-option uqmi -urngd
+	kmod-rtl8xxxu rtl8188eu-firmware kmod-usb-net kmod-usb-net-qmi-wwan kmod-usb-serial-option uqmi -urngd
 endef
 TARGET_DEVICES += emb3531
 
